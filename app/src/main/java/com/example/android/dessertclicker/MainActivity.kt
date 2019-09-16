@@ -82,11 +82,6 @@ class MainActivity : AppCompatActivity() {
         Timber.i("onCreate called")
     }
 
-    override fun onStart() {
-        super.onStart()
-        Timber.i("onStart called")
-    }
-
     /**
      * Updates the score when the dessert is clicked. Possibly shows a new dessert.
      */
@@ -152,5 +147,35 @@ class MainActivity : AppCompatActivity() {
             R.id.shareMenuButton -> onShare()
         }
         return super.onOptionsItemSelected(item)
+    }
+
+    override fun onStart() {
+        super.onStart()
+        Timber.i("onStart called")
+    }
+
+    override fun onResume() {
+        super.onResume()
+        Timber.i("onResume Called")
+    }
+
+    override fun onPause() {
+        super.onPause()
+        Timber.i("onPause Called")
+    }
+
+    override fun onStop() {
+        super.onStop()
+        Timber.i("onStop Called")
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        Timber.i("onDestroy Called")
+    }
+
+    override fun onRestart() {
+        super.onRestart()
+        Timber.i("onRestart Called")
     }
 }
